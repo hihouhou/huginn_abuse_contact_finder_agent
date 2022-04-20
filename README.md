@@ -1,6 +1,7 @@
 # AbuseContactFinderAgent
 
 Welcome to your new agent gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/huginn_abuse_contact_finder_agent`. To experiment with that code, run `bin/console` for an interactive prompt.
+I did this agent because previous dedicated agent is useless until info.io removed free access for data([huginn_ipinfo_abuse_contact_data_agent](https://github.com/hihouhou/huginn_ipinfo_abuse_contact_data_agent)).
 
 TODO: Delete this and the text above, and describe your gem
 
