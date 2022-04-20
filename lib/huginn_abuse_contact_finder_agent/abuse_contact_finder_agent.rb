@@ -13,9 +13,11 @@ module Agents
 
       `ip` for the ip wanted.
 
-      `host` for the targeted hostname.
+      `host` for the targeted hostname (not mandatory).
 
-      `type` for the ban type.
+      `type` for the ban type (not mandatory).
+
+      `jail` for the jail type (not mandatory).
 
       `logs` is not mandatory, just available if an email agent is after this one for completing for example an abuse report.
 
@@ -71,6 +73,7 @@ module Agents
         'ip' => '',
         'host' => '',
         'type' => '',
+        'jail' => '',
         'debug' => 'false',
         'expected_receive_period_in_days' => '2',
         'logs' => '',
@@ -83,6 +86,7 @@ module Agents
     form_configurable :ip, type: :string
     form_configurable :host, type: :string
     form_configurable :type, type: :string
+    form_configurable :jail, type: :string
     form_configurable :logs, type: :string
     form_configurable :emit_events, type: :boolean
 
@@ -140,6 +144,7 @@ module Agents
       payload[:ip] = "#{interpolated['ip']}"
       payload[:host] = "#{interpolated['host']}"
       payload[:type] = "#{interpolated['type']}"
+      payload[:jail] = "#{interpolated['jail']}"
   
       if interpolated['emit_events'] == 'true'
         create_event :payload => payload
